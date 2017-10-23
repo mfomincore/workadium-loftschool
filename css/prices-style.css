@@ -1,0 +1,572 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
+/* Шрифты */
+
+@font-face {
+    font-family: "Gotham_Pro-normal";
+    src: url("../font/GothaProLig.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gotham_Pro-bold";
+    src: url("../font/GothaProBol.otf") format("truetype");
+    font-style: bold;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Gotham_Pro-italic";
+    src: url("../font/GothaProLigIta.otf") format("truetype");
+    font-style: italic;
+    font-weight: italic;
+}
+
+
+/* Шрифты закончились */
+
+body {
+    margin: 0;
+    font-family: "Gotham_Pro-normal";
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper {
+    min-width: 1100px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.wrapper:after {
+    display: block;
+}
+
+.header {
+    width: 100%;
+    background-color: #27273e;
+    margin: 0 auto;
+    border: 0;
+    display: inline-block;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.logo {
+    float: left;
+    text-decoration: none;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-left: 20px;
+}
+
+.contacts {
+    float: right;
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 17px;
+    margin-right: 20px;
+}
+
+.contacts__number {
+    margin-bottom: 2px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Gotham_Pro-bold";
+}
+
+.contacts__number:hover {
+    text-decoration: underline;
+}
+
+.contacts__worktime {
+    display: inline-block;
+    font-weight: bold;
+    color: #b12167;
+    /* opacity: 0.7; */
+    font-size: 14px;
+}
+
+.contacts__worktime:hover {
+    opacity: 1.0;
+}
+
+
+/* Здесь кончается header */
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.content {
+    width: 900px;
+    display: inline-block;
+}
+
+
+/* Сайдбар в левой части страницы */
+
+.sidebar {
+    float: left;
+    width: 175px;
+    height: 100%;
+    margin-top: 33px;
+    font-family: "Gotham_Pro-bold";
+    margin-left: 20px;
+}
+
+.nav__item {
+    margin-bottom: 17px;
+}
+
+.nav__item:last-child {
+    margin-bottom: 0px;
+}
+
+.nav__link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav__icon {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    margin-right: 7px;
+    border: 0;
+    vertical-align: middle;
+}
+
+.nav__text {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    line-height: 1.5em;
+    font-family: "Gotham_Pro-normal";
+    padding: 6px;
+    color: #ec1e79;
+}
+
+.nav__text_active {
+    color: #525151;
+    vertical-align: middle;
+    font-family: "Gotham_Pro-normal";
+    display: inline-block;
+}
+
+.nav__text_active:hover {
+    color: #ec1e79;
+}
+
+.nav__text:hover {
+    color: #525151;
+}
+
+
+/* Иконка-псевдокласс, на который она меняется */
+
+.nav__trangle {
+    background-image: url('../img/trangle-icon.png');
+    background-repeat: no-repeat;
+}
+
+.nav__link:hover .nav__trangle {
+    background-image: url('../img/trangle-black.png');
+    background-repeat: no-repeat;
+}
+
+.nav__cash {
+    background-image: url('../img/cash-icon.png');
+    background-repeat: no-repeat;
+}
+
+.nav__link:hover .nav__cash {
+    background-image: url('../img/cash-pink.png');
+    background-repeat: no-repeat;
+}
+
+.nav__star-icon {
+    background-image: url('../img/star-icon.png');
+    background-repeat: no-repeat;
+}
+
+.nav__link:hover .nav__star-icon {
+    background-image: url('../img/star-black.png');
+    background-repeat: no-repeat;
+}
+
+
+/* Конец сайтбара */
+
+
+/* Хлебные крошки */
+
+.bread__crumbs {
+    font-family: "Gotham_Pro-italic";
+    font-size: 14px;
+    margin-top: 38px;
+    margin-left: 5px;
+}
+
+.bread__crumbs-item {
+    display: inline-block;
+}
+
+.bread__crumbs-link-passive {
+    color: #f172a1;
+}
+
+.bread__crumbs-link-active {
+    text-decoration: none;
+    color: #525151;
+}
+
+.title {
+    font-family: "Gotham_Pro-bold";
+    font-size: 49px;
+    display: block;
+    line-height: 0.8em;
+    padding: 0;
+}
+
+
+/* Основноый контент */
+
+.items {
+    display: block;
+    text-align: center;
+}
+
+.items__block {
+    float: left;
+    display: inline-block;
+    width: 250px;
+    height: 420px;
+    margin-right: 50px;
+    margin-left: 0px;
+    vertical-align: text-top;
+    padding: 0;
+}
+
+.items__table {
+    width: 250px;
+    text-align: center;
+}
+
+.items__img {
+    width: 250px;
+    height: 150px;
+    background-size: 250px 150px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.items__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+/* Картинки */
+
+.items_img-jpg-1 {
+    background-image: url('../img/1p.jpg');
+    max-width: 100%;
+}
+
+.items_img-jpg-2 {
+    background-image: url('../img/2p.jpg');
+    max-width: 100%;
+}
+
+.items_img-jpg-3 {
+    background-image: url('../img/3p.jpg');
+    max-width: 100%;
+}
+
+.items_img-jpg-4 {
+    background-image: url('../img/4p.jpg');
+    max-width: 100%;
+}
+
+.items_img-jpg-5 {
+    background-image: url('../img/5p.jpg');
+    max-width: 100%;
+}
+
+.items_img-jpg-6 {
+    background-image: url('../img/6p.jpg');
+    max-width: 100%;
+}
+
+
+/* Описания блоков */
+
+.items__price {
+    font-size: 18.2px;
+    font-family: "Gotham_Pro-bold";
+}
+
+.items__special {
+    color: #ec1e79;
+    font-family: "Gotham_Pro-bold";
+    font-size: 24px;
+    margin: 0;
+}
+
+.items__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #5dd1f8;
+    font-family: "Gotham_Pro-bold";
+    margin: 0;
+}
+
+.contacts__link {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.items__info {
+    width: 250px;
+}
+
+.items__description {
+    width: 250px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+/* Псевдоэлементы для наложения поверх картинки */
+
+.items_img-jpg-1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #27273e;
+    opacity: 0.9;
+}
+
+.items_img-jpg-2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #27273e;
+    opacity: 0.9;
+}
+
+.items_img-jpg-3:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #27273e;
+    opacity: 0.9;
+}
+
+.items_img-jpg-4:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #27273e;
+    opacity: 0.9;
+}
+
+.items_img-jpg-5:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #27273e;
+    opacity: 0.9;
+}
+
+.items_img-jpg-6:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #27273e;
+    opacity: 0.9;
+}
+
+
+/* Конец основного контента */
+
+
+/* Начало футера */
+
+footer {
+    width: 100%;
+    display: inline-block;
+    background-color: #27273e;
+    box-sizing: border-box;
+    font-family: "Gotham_Pro-normal", sans-serif;
+    margin: 0;
+}
+
+.footer__items {
+    display: inline-block;
+    box-sizing: border-box;
+    color: white;
+    float: left;
+    width: 33.3%;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.footer__link {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer__items-link {
+    display: block;
+}
+
+.footer__autor {
+    float: left;
+    display: block;
+}
+
+.git_link {
+    text-decoration: none;
+}
+
+
+/* Лого ссылки и социалка футера */
+
+.footer__logo {
+    display: inline-block;
+    text-align: center;
+    vertical-align: super;
+    margin-top: 15px;
+    width: 33.3%;
+}
+
+.footer__social {
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+}
+
+.footer__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    font-family: "Gotham_Pro-bold";
+    display: block;
+    margin: 0;
+}
+
+
+/* Социальные сети */
+
+.footer__account {
+    display: inline-block;
+}
+
+.footer__social-vk,
+.footer__social-fb,
+.footer__social-tw,
+.footer__social-Gp,
+.footer__social-mail {
+    background-color: #d4d4d8;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 6px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.footer__social-vk:hover,
+.footer__social-fb:hover,
+.footer__social-tw:hover,
+.footer__social-Gp:hover,
+.footer__social-mail:hover {
+    background-color: #ec1e79;
+}
+
+.footer__social {
+    text-align: left;
+    display: block;
+    float: right;
+    margin-bottom: 16px;
+}
+
+.footer__social-vk {
+    background-image: url(../img/vk.png);
+}
+
+.footer__social-fb {
+    background-image: url(../img/fb.png);
+}
+
+.footer__social-tw {
+    background-image: url(../img/twitter.png);
+}
+
+.footer__social-Gp {
+    background-image: url(../img/google.png);
+}
+
+.footer__social-mail {
+    background-image: url(../img/mail.png);
+}
+
+.footer__items-link {
+    color: #fff;
+}
